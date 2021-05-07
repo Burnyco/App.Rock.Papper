@@ -15,11 +15,19 @@ function getComputerChoice() {
 
 }
 
+function convertToWord(letter) {
+    if (letter === 'r') return "Rock";
+    if (letter === 'p') return "Paper";
+    return "Scissors";
+}
+
+
+
 function win(userChoise, computerChoice) {
     userScore++;
     userScore_span.innerHTML = userScore;
     computerScore_span.innerHTML = computerScore;
-    result_p.innerHTML = userChoise + "Beats" + computerChoice + "You Win !";
+    result_p.innerHTML = convertToWord(userChoise) + "Beats" + convertToWord(computerChoice) + "You Win !";
 
 }
 
