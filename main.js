@@ -8,14 +8,37 @@ const rock_div = document.getElementById('r');
 const paper_div = document.getElementById('p');
 const scissors_div = document.getElementById('s');
 
-rock_div.addEventListener('click', function() {
-    console.log('zd bichoo :D qvai var ')
-});
+function getComputerChoice() {
+    const choices = ['r', 'p', 's'];
+    const randomNumber = Math.floor(Math.random() * 3);
+    return choices[randomNumber];
 
-paper_div.addEventListener('click', function() {
-    console.log('zd papperr')
-})
+}
+console.log(getComputerChoice());
 
-scissors_div.addEventListener('click', function() {
-    console.log('Zd i am Scissssssssoooor')
-});
+function game(userChoise) {
+
+
+}
+
+
+
+
+function main() {
+
+    rock_div.addEventListener('click', function() {
+        game('r')
+
+    })
+
+    paper_div.addEventListener('click', function() {
+        game('p')
+    })
+
+    scissors_div.addEventListener('click', function() {
+        game('s')
+    })
+
+}
+
+main();
