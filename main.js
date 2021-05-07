@@ -27,16 +27,29 @@ function win(userChoise, computerChoice) {
     userScore++;
     userScore_span.innerHTML = userScore;
     computerScore_span.innerHTML = computerScore;
-    result_p.innerHTML = convertToWord(userChoise) + "Beats" + convertToWord(computerChoice) + "You Win !";
+    const smallUserWord = 'You'.fontsize(3).sub();
+    const smallMachineWord = 'Machine'.fontsize(3).sub();
+    result_p.innerHTML = ` ${convertToWord(userChoise)}${smallUserWord} Beats  ${convertToWord(computerChoice)}${smallMachineWord}  You Win ! `;
 
 }
 
-function lose() {
+function lose(userChoise, computerChoice) {
 
+    computerScore++;
+    userScore_span.innerHTML = userScore;
+    computerScore_span.innerHTML = computerScore;
+    const smallUserWord = 'You'.fontsize(3).sub();
+    const smallMachineWord = 'Machine'.fontsize(3).sub();
+    result_p.innerHTML = ` ${convertToWord(userChoise)}${smallUserWord} Loses ${convertToWord(computerChoice)}${smallMachineWord}  You Lost ! `;
 }
 
-function draw() {
-    console.log("DRAW");
+function draw(userChoise, computerChoice) {
+
+    userScore_span.innerHTML = userScore;
+    computerScore_span.innerHTML = computerScore;
+    const smallUserWord = 'You'.fontsize(3).sub();
+    const smallMachineWord = 'Machine'.fontsize(3).sub();
+    result_p.innerHTML = ` ${convertToWord(userChoise)}${smallUserWord} Equals ${convertToWord(computerChoice)}${smallMachineWord}  It's a Draw ! `;
 }
 
 
