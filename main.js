@@ -30,8 +30,11 @@ function win(userChoise, computerChoice) {
     const smallUserWord = 'You'.fontsize(3).sub();
     const smallMachineWord = 'Machine'.fontsize(3).sub();
     result_p.innerHTML = ` ${convertToWord(userChoise)}${smallUserWord} Beats  ${convertToWord(computerChoice)}${smallMachineWord}  You Win ! `;
-
+    document.getElementById(userChoise).classList.add('green-glow');
+    setTimeout(function() { document.getElementById(userChoise).classList.remove('green-glow') }, 400);
 }
+
+
 
 function lose(userChoise, computerChoice) {
 
@@ -41,15 +44,17 @@ function lose(userChoise, computerChoice) {
     const smallUserWord = 'You'.fontsize(3).sub();
     const smallMachineWord = 'Machine'.fontsize(3).sub();
     result_p.innerHTML = ` ${convertToWord(userChoise)}${smallUserWord} Loses ${convertToWord(computerChoice)}${smallMachineWord}  You Lost ! `;
+    document.getElementById(userChoise).classList.add('red-glow');
+    setTimeout(function() { document.getElementById(userChoise).classList.remove('red-glow') }, 500);
 }
 
 function draw(userChoise, computerChoice) {
 
-    userScore_span.innerHTML = userScore;
-    computerScore_span.innerHTML = computerScore;
     const smallUserWord = 'You'.fontsize(3).sub();
     const smallMachineWord = 'Machine'.fontsize(3).sub();
     result_p.innerHTML = ` ${convertToWord(userChoise)}${smallUserWord} Equals ${convertToWord(computerChoice)}${smallMachineWord}  It's a Draw ! `;
+    document.getElementById(userChoise).classList.add('blue-glow');
+    setTimeout(function() { document.getElementById(userChoise).classList.remove('blue-glow') }, 400);
 }
 
 

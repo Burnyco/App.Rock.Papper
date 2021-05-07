@@ -96,3 +96,18 @@ header>h1 {
     font-family: 'Asap', sans-serif;
     margin-top: 30px;
 }
+
+.green-glow {
+    border: 4px solid green;
+    box-shadow: 0 0 10px rgb(68, 241, 68);
+}
+
+.red-glow {
+    border: 4px sloid red;
+    box-shadow: 0 0 10px rgb(156, 5, 5);
+}
+
+.blue-glow {
+    border: 4px solid #1515ca;
+    box-shadow: 0 0 10px #0992d6;
+}
