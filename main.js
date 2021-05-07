@@ -14,10 +14,26 @@ function getComputerChoice() {
     return choices[randomNumber];
 
 }
-console.log(getComputerChoice());
 
 function game(userChoise) {
+    const computerChoice = getComputerChoice();
+    switch (userChoise + computerChoice) {
+        case 'rp':
+        case 'pr':
+        case 'sp':
+            console.log("USER WINS.");
+            break;
+        case 'rp':
+        case 'ps':
+        case 'sr':
+            console.log("USER LOSES.");
+            break;
+        case 'rr':
+        case 'p':
+        case 'ss':
+            console.log("DRAW");
 
+    }
 
 }
 
